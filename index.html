@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        table{
+            margin: auto;
+            margin-top: 4%;
+        }
+        th{
+            width: 40%;
+            text-align: left;
+            border-bottom: 2px solid rgb(79, 76, 76);
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    var student_detail = {
+        name : prompt("Enter Your Name Sir...."),
+        fName : prompt("Enter Your Father Name...."),
+        id : prompt("Enter Your Student ID...."),
+        age : prompt("Enter Your Age Sir...")
+    };
+    var table = document.createElement("table");
+    var tr = document.createElement("tr");
+    var tr2 = document.createElement("tr");
+    var tr3 = document.createElement("tr");
+    var tr4 = document.createElement("tr");
+    var th = document.createElement("th");
+    var th2 = document.createElement("th");
+    var th3 = document.createElement("th");
+    var th4 = document.createElement("th");
+    var thd = document.createElement("th");
+    var thd2 = document.createElement("th");
+    var thd3 = document.createElement("th");
+    var thd4 = document.createElement("th");
+    th.innerHTML = "Name:";
+    th2.innerHTML = "Father Name:";
+    th3.innerHTML = "Student ID:";
+    th4.innerHTML = "Age";
+    thd.innerHTML = student_detail.name;
+    thd2.innerHTML = student_detail.fName;
+    thd3.innerHTML = student_detail.id;
+    thd4.innerHTML = student_detail.age;
+
+
+
+
+
+
+    var arrayOfTr = [tr,tr2,tr3,tr4];
+    var arrayOfTh = [th,th2,th3,th4];
+    var arrayOfthd = [thd,thd2,thd3,thd4];
+
+
+    for (var i = 0; i < 4; i++){
+        arrayOfTr[i].appendChild(arrayOfTh[i]);
+        arrayOfTr[i].appendChild(arrayOfthd[i]);
+        table.appendChild(arrayOfTr[i]);
+    }
+
+    document.getElementsByTagName("body")[0].appendChild(table);
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</html>
